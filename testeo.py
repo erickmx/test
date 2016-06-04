@@ -22,6 +22,16 @@ class MiVentana(QtGui.QDialog):
         self.etiquetamensaje = QtGui.QLabel(self)
         self.etiquetamensaje.setGeometry(150,200,150,30)
         
+        self.botonsumar = QtGui.QRadioButton("Sumar", self)
+        self.botonsumar.setGeometry(100,250,70,30)
+        self.botonsumar.setChecked(True)
+        self.botonrestar = QtGui.QRadioButton("Restar", self)
+        self.botonrestar.setGeometry(100,280,70,30)
+        self.botonmultiplicar = QtGui.QRadioButton("Multiplicar", self)
+        self.botonmultiplicar.setGeometry(100,310,90,30)
+        self.botondividir = QtGui.QRadioButton("Dividir", self)
+        self.botondividir.setGeometry(100,340,70,30)
+        
     def saluda(self):
         if len(self.lineanombre.text()) != 0:
             self.etiquetamensaje.setText("Hola " + self.lineanombre.text())
